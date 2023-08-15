@@ -45,7 +45,7 @@ resource "google_cloud_run_v2_service_iam_member" "default" {
   member   = "allUsers"
 }
 
-# A (Serverless) NEG is is not a load balancing component!
+# A (serverless) NEG is not a load balancing component!
 # https://cloud.google.com/load-balancing/docs/negs/serverless-neg-concepts#load_balancing_components
 resource "google_compute_region_network_endpoint_group" "default" {
   project = data.google_project.default.project_id
